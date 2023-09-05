@@ -43,6 +43,9 @@
 		414532222AA7ABF5006CE364 /* UserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414532212AA7ABF5006CE364 /* UserResponse.swift */; };
 		414532242AA7AE85006CE364 /* UserServicePreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414532232AA7AE85006CE364 /* UserServicePreview.swift */; };
 		414532262AA7AECD006CE364 /* UserResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 414532252AA7AECD006CE364 /* UserResponse.json */; };
+		414532282AA7B8E1006CE364 /* ConfigDebug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 414532272AA7B8E1006CE364 /* ConfigDebug.xcconfig */; };
+		4145322A2AA7B931006CE364 /* ConfigProd.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 414532292AA7B931006CE364 /* ConfigProd.xcconfig */; };
+		4145322D2AA7BA19006CE364 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4145322C2AA7BA19006CE364 /* AppConfig.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +103,10 @@
 		414532212AA7ABF5006CE364 /* UserResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserResponse.swift; sourceTree = "<group>"; };
 		414532232AA7AE85006CE364 /* UserServicePreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserServicePreview.swift; sourceTree = "<group>"; };
 		414532252AA7AECD006CE364 /* UserResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = UserResponse.json; sourceTree = "<group>"; };
+		414532272AA7B8E1006CE364 /* ConfigDebug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = ConfigDebug.xcconfig; sourceTree = "<group>"; };
+		414532292AA7B931006CE364 /* ConfigProd.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = ConfigProd.xcconfig; sourceTree = "<group>"; };
+		4145322B2AA7B9CF006CE364 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		4145322C2AA7BA19006CE364 /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +159,7 @@
 		414531AC2AA78E32006CE364 /* DemoSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				4145322B2AA7B9CF006CE364 /* Info.plist */,
 				414531DC2AA78E41006CE364 /* App */,
 				414531E12AA78FBD006CE364 /* Network */,
 				414531E62AA79100006CE364 /* Utilities */,
@@ -161,6 +169,8 @@
 				414531DE2AA78F04006CE364 /* Screen */,
 				414531DF2AA78F17006CE364 /* Assets */,
 				414531B82AA78E33006CE364 /* DemoSwiftUI.xcdatamodeld */,
+				414532292AA7B931006CE364 /* ConfigProd.xcconfig */,
+				414532272AA7B8E1006CE364 /* ConfigDebug.xcconfig */,
 				414531B32AA78E33006CE364 /* Preview Content */,
 			);
 			path = DemoSwiftUI;
@@ -197,6 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				414531AD2AA78E32006CE364 /* DemoSwiftUIApp.swift */,
+				4145322C2AA7BA19006CE364 /* AppConfig.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -471,7 +482,9 @@
 				4145320E2AA79C80006CE364 /* Photos.json in Resources */,
 				414531B52AA78E33006CE364 /* Preview Assets.xcassets in Resources */,
 				414531B22AA78E33006CE364 /* Assets.xcassets in Resources */,
+				4145322A2AA7B931006CE364 /* ConfigProd.xcconfig in Resources */,
 				414532262AA7AECD006CE364 /* UserResponse.json in Resources */,
+				414532282AA7B8E1006CE364 /* ConfigDebug.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -513,6 +526,7 @@
 				414532192AA7A7F6006CE364 /* PhotoDetailScreen.swift in Sources */,
 				414532032AA79791006CE364 /* PhotosService.swift in Sources */,
 				414532112AA79CE4006CE364 /* PhotosServicePreview.swift in Sources */,
+				4145322D2AA7BA19006CE364 /* AppConfig.swift in Sources */,
 				4145321B2AA7A8A0006CE364 /* PhotosDetailViewModel.swift in Sources */,
 				414531E32AA78FD9006CE364 /* NetworkCaller.swift in Sources */,
 				414531EB2AA791EB006CE364 /* EndpointProtocol.swift in Sources */,
@@ -561,6 +575,7 @@
 /* Begin XCBuildConfiguration section */
 		414531D12AA78E34006CE364 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 414532272AA7B8E1006CE364 /* ConfigDebug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -621,6 +636,7 @@
 		};
 		414531D22AA78E34006CE364 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 414532292AA7B931006CE364 /* ConfigProd.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -684,6 +700,8 @@
 				DEVELOPMENT_TEAM = 63AR2LU87T;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DemoSwiftUI/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Demo SwiftUI D";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -713,6 +731,8 @@
 				DEVELOPMENT_TEAM = 63AR2LU87T;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DemoSwiftUI/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Demo SwiftUI";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

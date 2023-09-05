@@ -42,7 +42,7 @@ extension EndpointProtocol {
     var urlComponents: URLComponents {
         var component = URLComponents()
         component.scheme = "https"
-        component.host = "api.slingacademy.com" // TODO: - get it from Configuration file
+        component.host = AppConfig.baseUrl
         component.path = path
         component.percentEncodedQueryItems = queryItems
         return component
