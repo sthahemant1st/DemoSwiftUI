@@ -16,33 +16,33 @@ struct PhotosScreen: View {
     }
 
     var body: some View {
-        NavigationStack {
-            ScrollView {
-                LazyVStack(spacing: 16) {
-                    
-                    mainView
-
-                    if let error = viewModel.error {
-                        ErrorRetryView(
-                            description: error.localizedDescription,
-                            action: onErrorRetry
-                        )
-                    }
-
-                    if viewModel.hasMore {
-                        progressView
-                    }
+        ScrollView {
+            LazyVStack(spacing: 16) {
+                
+                ForEach(viewModel.photos) { photo in
+                    PhotoView(photo: photo)
                 }
-                .padding()
-            }
-            .refreshable {
-                /// has added task since there is an issue where async task is killed in iOS 16.4
-                Task {
-                    await viewModel.refresh()
+                
+                if let error = viewModel.error {
+                    ErrorRetryView(
+                        description: error.localizedDescription,
+                        action: onErrorRetry
+                    )
+                }
+                
+                if viewModel.hasMore {
+                    progressView
                 }
             }
-            .navigationTitle("Photos")
+            .padding()
         }
+        .refreshable {
+            /// has added task since there is an issue where async task is killed in iOS 16.4
+            Task {
+                await viewModel.refresh()
+            }
+        }
+        .navigationTitle("Photos")
     }
 
     private func onErrorRetry() {
@@ -64,9 +64,13 @@ extension PhotosScreen {
             }
             .frame(maxWidth: .infinity)
     }
+}
 
-    private var mainView: some View {
-        ForEach(viewModel.photos) { photo in
+struct PhotoView: View {
+    let photo: Photo
+
+    var body: some View {
+        NavigationLink(value: photo) {
             VStack(alignment: .leading, spacing: 8) {
                 KFImage(URL(string: photo.url))
                     .resizable(resizingMode: .stretch)
@@ -75,12 +79,16 @@ extension PhotosScreen {
                     Text(photo.title)
                         .font(.body)
                         .fontWeight(.bold)
+                        .multilineTextAlignment(.leading)
                     Text(photo.description)
                         .font(.callout)
+                        .multilineTextAlignment(.leading)
                 }
+                .foregroundColor(.black)
                 Divider()
             }
         }
+        .buttonStyle(.borderless)
     }
 }
 

@@ -8,7 +8,7 @@
 import Foundation
 
 @MainActor
-class PhotosViewModel: ObservableObject {
+final class PhotosViewModel: ObservableObject {
     private let photosService: PhotosService
     private let pageLimit = 40
 

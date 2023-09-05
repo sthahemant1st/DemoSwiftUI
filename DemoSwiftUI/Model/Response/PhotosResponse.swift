@@ -21,12 +21,22 @@ struct PhotosResponse: Decodable {
     }
 }
 
-struct Photo: Decodable, Identifiable {
+struct Photo: Codable, Identifiable, Hashable {
     let description: String
     let id: Int
     let url: String
     let title: String
     let user: Int
+}
+// MARK: - dummy
+extension Photo {
+    static let dummy: Self = .init(
+        description: "Training beautiful age four skin cultural hundred environmental ability blood go physical relate produce tough open police.",
+        id: 6,
+        url: "https://api.slingacademy.com/public/sample-photos/6.jpeg",
+        title: "Photo Title",
+        user: 30
+    )
 }
 
 typealias Photos = [Photo]

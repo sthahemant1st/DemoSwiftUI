@@ -45,7 +45,6 @@ extension EndpointProtocol {
         component.host = "api.slingacademy.com" // TODO: - get it from Configuration file
         component.path = path
         component.percentEncodedQueryItems = queryItems
-
         return component
     }
 

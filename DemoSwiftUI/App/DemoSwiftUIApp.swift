@@ -14,7 +14,12 @@ struct DemoSwiftUIApp: App {
 
     var body: some Scene {
         WindowGroup {
-            PhotosScreen(viewModel: photosViewModel)
+            NavigationStack {
+                PhotosScreen(viewModel: photosViewModel)
+                    .navigationDestination(for: Photo.self) { photo in
+                        PhotoDetailScreen(viewModel: PhotosDetailsViewModel(photo: photo))
+                    }
+            }
 //            ContentView()
 //                .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
