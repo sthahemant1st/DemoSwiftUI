@@ -21,6 +21,16 @@
 		414531E92AA79121006CE364 /* Data+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414531E82AA79121006CE364 /* Data+Extension.swift */; };
 		414531EB2AA791EB006CE364 /* EndpointProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414531EA2AA791EB006CE364 /* EndpointProtocol.swift */; };
 		414531ED2AA7924B006CE364 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414531EC2AA7924B006CE364 /* HTTPMethod.swift */; };
+		414531F02AA794A6006CE364 /* PhotosScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414531EF2AA794A6006CE364 /* PhotosScreen.swift */; };
+		414531F22AA794C7006CE364 /* PhotosViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414531F12AA794C7006CE364 /* PhotosViewModel.swift */; };
+		414531F62AA795B8006CE364 /* PhotosResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414531F52AA795B8006CE364 /* PhotosResponse.swift */; };
+		414531F92AA795F2006CE364 /* PaginationQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414531F82AA795F2006CE364 /* PaginationQuery.swift */; };
+		414531FB2AA79645006CE364 /* Encodable+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414531FA2AA79645006CE364 /* Encodable+Extension.swift */; };
+		414531FE2AA79703006CE364 /* URLQueryItemEncoder in Frameworks */ = {isa = PBXBuildFile; productRef = 414531FD2AA79703006CE364 /* URLQueryItemEncoder */; };
+		414532002AA79760006CE364 /* Optional+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414531FF2AA79760006CE364 /* Optional+Extension.swift */; };
+		414532032AA79791006CE364 /* PhotosService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414532022AA79791006CE364 /* PhotosService.swift */; };
+		414532062AA7996A006CE364 /* TypeAlise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414532052AA7996A006CE364 /* TypeAlise.swift */; };
+		414532082AA799D4006CE364 /* PhotosServiceNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414532072AA799D4006CE364 /* PhotosServiceNetwork.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +68,15 @@
 		414531E82AA79121006CE364 /* Data+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Extension.swift"; sourceTree = "<group>"; };
 		414531EA2AA791EB006CE364 /* EndpointProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointProtocol.swift; sourceTree = "<group>"; };
 		414531EC2AA7924B006CE364 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		414531EF2AA794A6006CE364 /* PhotosScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosScreen.swift; sourceTree = "<group>"; };
+		414531F12AA794C7006CE364 /* PhotosViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewModel.swift; sourceTree = "<group>"; };
+		414531F52AA795B8006CE364 /* PhotosResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosResponse.swift; sourceTree = "<group>"; };
+		414531F82AA795F2006CE364 /* PaginationQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginationQuery.swift; sourceTree = "<group>"; };
+		414531FA2AA79645006CE364 /* Encodable+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+Extension.swift"; sourceTree = "<group>"; };
+		414531FF2AA79760006CE364 /* Optional+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Optional+Extension.swift"; sourceTree = "<group>"; };
+		414532022AA79791006CE364 /* PhotosService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosService.swift; sourceTree = "<group>"; };
+		414532052AA7996A006CE364 /* TypeAlise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeAlise.swift; sourceTree = "<group>"; };
+		414532072AA799D4006CE364 /* PhotosServiceNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosServiceNetwork.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				414531FE2AA79703006CE364 /* URLQueryItemEncoder in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +132,8 @@
 				414531E12AA78FBD006CE364 /* Network */,
 				414531E62AA79100006CE364 /* Utilities */,
 				414531E02AA78F33006CE364 /* Persistence */,
+				414532012AA79773006CE364 /* Service */,
+				414531F32AA7954B006CE364 /* Model */,
 				414531DE2AA78F04006CE364 /* Screen */,
 				414531DF2AA78F17006CE364 /* Assets */,
 				414531B82AA78E33006CE364 /* DemoSwiftUI.xcdatamodeld */,
@@ -156,6 +178,7 @@
 		414531DE2AA78F04006CE364 /* Screen */ = {
 			isa = PBXGroup;
 			children = (
+				414531EE2AA79481006CE364 /* Photos */,
 				414531AF2AA78E32006CE364 /* ContentView.swift */,
 			);
 			path = Screen;
@@ -191,6 +214,7 @@
 		414531E62AA79100006CE364 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				414532052AA7996A006CE364 /* TypeAlise.swift */,
 				414531E72AA7910E006CE364 /* Extensions */,
 			);
 			path = Utilities;
@@ -200,8 +224,61 @@
 			isa = PBXGroup;
 			children = (
 				414531E82AA79121006CE364 /* Data+Extension.swift */,
+				414531FA2AA79645006CE364 /* Encodable+Extension.swift */,
+				414531FF2AA79760006CE364 /* Optional+Extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		414531EE2AA79481006CE364 /* Photos */ = {
+			isa = PBXGroup;
+			children = (
+				414531EF2AA794A6006CE364 /* PhotosScreen.swift */,
+				414531F12AA794C7006CE364 /* PhotosViewModel.swift */,
+			);
+			path = Photos;
+			sourceTree = "<group>";
+		};
+		414531F32AA7954B006CE364 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				414531F72AA795CD006CE364 /* Query */,
+				414531F42AA795AB006CE364 /* Response */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		414531F42AA795AB006CE364 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				414531F52AA795B8006CE364 /* PhotosResponse.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		414531F72AA795CD006CE364 /* Query */ = {
+			isa = PBXGroup;
+			children = (
+				414531F82AA795F2006CE364 /* PaginationQuery.swift */,
+			);
+			path = Query;
+			sourceTree = "<group>";
+		};
+		414532012AA79773006CE364 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				414532042AA79949006CE364 /* PhotosService */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		414532042AA79949006CE364 /* PhotosService */ = {
+			isa = PBXGroup;
+			children = (
+				414532022AA79791006CE364 /* PhotosService.swift */,
+				414532072AA799D4006CE364 /* PhotosServiceNetwork.swift */,
+			);
+			path = PhotosService;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,6 +297,9 @@
 			dependencies = (
 			);
 			name = DemoSwiftUI;
+			packageProductDependencies = (
+				414531FD2AA79703006CE364 /* URLQueryItemEncoder */,
+			);
 			productName = DemoSwiftUI;
 			productReference = 414531AA2AA78E32006CE364 /* DemoSwiftUI.app */;
 			productType = "com.apple.product-type.application";
@@ -292,6 +372,9 @@
 				Base,
 			);
 			mainGroup = 414531A12AA78E32006CE364;
+			packageReferences = (
+				414531FC2AA79703006CE364 /* XCRemoteSwiftPackageReference "URLQueryItemEncoder" */,
+			);
 			productRefGroup = 414531AB2AA78E32006CE364 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -336,11 +419,20 @@
 			files = (
 				414531BA2AA78E33006CE364 /* DemoSwiftUI.xcdatamodeld in Sources */,
 				414531E92AA79121006CE364 /* Data+Extension.swift in Sources */,
+				414531F22AA794C7006CE364 /* PhotosViewModel.swift in Sources */,
+				414531FB2AA79645006CE364 /* Encodable+Extension.swift in Sources */,
+				414531F62AA795B8006CE364 /* PhotosResponse.swift in Sources */,
+				414532062AA7996A006CE364 /* TypeAlise.swift in Sources */,
+				414531F02AA794A6006CE364 /* PhotosScreen.swift in Sources */,
 				414531B72AA78E33006CE364 /* Persistence.swift in Sources */,
+				414532002AA79760006CE364 /* Optional+Extension.swift in Sources */,
+				414532032AA79791006CE364 /* PhotosService.swift in Sources */,
 				414531E32AA78FD9006CE364 /* NetworkCaller.swift in Sources */,
 				414531EB2AA791EB006CE364 /* EndpointProtocol.swift in Sources */,
 				414531ED2AA7924B006CE364 /* HTTPMethod.swift in Sources */,
 				414531B02AA78E32006CE364 /* ContentView.swift in Sources */,
+				414531F92AA795F2006CE364 /* PaginationQuery.swift in Sources */,
+				414532082AA799D4006CE364 /* PhotosServiceNetwork.swift in Sources */,
 				414531AE2AA78E32006CE364 /* DemoSwiftUIApp.swift in Sources */,
 				414531E52AA79013006CE364 /* APIError.swift in Sources */,
 			);
@@ -667,6 +759,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		414531FC2AA79703006CE364 /* XCRemoteSwiftPackageReference "URLQueryItemEncoder" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pitiphong-p/URLQueryItemEncoder";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.2.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		414531FD2AA79703006CE364 /* URLQueryItemEncoder */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 414531FC2AA79703006CE364 /* XCRemoteSwiftPackageReference "URLQueryItemEncoder" */;
+			productName = URLQueryItemEncoder;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		414531B82AA78E33006CE364 /* DemoSwiftUI.xcdatamodeld */ = {
