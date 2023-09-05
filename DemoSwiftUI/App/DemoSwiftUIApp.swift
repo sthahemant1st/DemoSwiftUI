@@ -10,11 +10,13 @@ import SwiftUI
 @main
 struct DemoSwiftUIApp: App {
     let persistenceController = PersistenceController.shared
+    @StateObject private var photosViewModel = PhotosViewModel()
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            PhotosScreen(viewModel: photosViewModel)
+//            ContentView()
+//                .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
 }

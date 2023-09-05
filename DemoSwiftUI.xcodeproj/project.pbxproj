@@ -31,6 +31,11 @@
 		414532032AA79791006CE364 /* PhotosService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414532022AA79791006CE364 /* PhotosService.swift */; };
 		414532062AA7996A006CE364 /* TypeAlise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414532052AA7996A006CE364 /* TypeAlise.swift */; };
 		414532082AA799D4006CE364 /* PhotosServiceNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414532072AA799D4006CE364 /* PhotosServiceNetwork.swift */; };
+		4145320B2AA79ACE006CE364 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 4145320A2AA79ACE006CE364 /* Kingfisher */; };
+		4145320E2AA79C80006CE364 /* Photos.json in Resources */ = {isa = PBXBuildFile; fileRef = 4145320D2AA79C80006CE364 /* Photos.json */; };
+		414532112AA79CE4006CE364 /* PhotosServicePreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414532102AA79CE4006CE364 /* PhotosServicePreview.swift */; };
+		414532132AA79D17006CE364 /* JSONHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414532122AA79D17006CE364 /* JSONHelper.swift */; };
+		414532162AA7A12E006CE364 /* ErrorRetryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414532152AA7A12E006CE364 /* ErrorRetryView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +82,10 @@
 		414532022AA79791006CE364 /* PhotosService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosService.swift; sourceTree = "<group>"; };
 		414532052AA7996A006CE364 /* TypeAlise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeAlise.swift; sourceTree = "<group>"; };
 		414532072AA799D4006CE364 /* PhotosServiceNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosServiceNetwork.swift; sourceTree = "<group>"; };
+		4145320D2AA79C80006CE364 /* Photos.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Photos.json; sourceTree = "<group>"; };
+		414532102AA79CE4006CE364 /* PhotosServicePreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosServicePreview.swift; sourceTree = "<group>"; };
+		414532122AA79D17006CE364 /* JSONHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONHelper.swift; sourceTree = "<group>"; };
+		414532152AA7A12E006CE364 /* ErrorRetryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorRetryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4145320B2AA79ACE006CE364 /* Kingfisher in Frameworks */,
 				414531FE2AA79703006CE364 /* URLQueryItemEncoder in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -145,6 +155,8 @@
 		414531B32AA78E33006CE364 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
+				4145320F2AA79CCD006CE364 /* Service */,
+				4145320C2AA79C65006CE364 /* JSON */,
 				414531B42AA78E33006CE364 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
@@ -178,6 +190,7 @@
 		414531DE2AA78F04006CE364 /* Screen */ = {
 			isa = PBXGroup;
 			children = (
+				414532142AA7A11D006CE364 /* Common */,
 				414531EE2AA79481006CE364 /* Photos */,
 				414531AF2AA78E32006CE364 /* ContentView.swift */,
 			);
@@ -216,6 +229,7 @@
 			children = (
 				414532052AA7996A006CE364 /* TypeAlise.swift */,
 				414531E72AA7910E006CE364 /* Extensions */,
+				414532122AA79D17006CE364 /* JSONHelper.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -281,6 +295,30 @@
 			path = PhotosService;
 			sourceTree = "<group>";
 		};
+		4145320C2AA79C65006CE364 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				4145320D2AA79C80006CE364 /* Photos.json */,
+			);
+			path = JSON;
+			sourceTree = "<group>";
+		};
+		4145320F2AA79CCD006CE364 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				414532102AA79CE4006CE364 /* PhotosServicePreview.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		414532142AA7A11D006CE364 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				414532152AA7A12E006CE364 /* ErrorRetryView.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -299,6 +337,7 @@
 			name = DemoSwiftUI;
 			packageProductDependencies = (
 				414531FD2AA79703006CE364 /* URLQueryItemEncoder */,
+				4145320A2AA79ACE006CE364 /* Kingfisher */,
 			);
 			productName = DemoSwiftUI;
 			productReference = 414531AA2AA78E32006CE364 /* DemoSwiftUI.app */;
@@ -374,6 +413,7 @@
 			mainGroup = 414531A12AA78E32006CE364;
 			packageReferences = (
 				414531FC2AA79703006CE364 /* XCRemoteSwiftPackageReference "URLQueryItemEncoder" */,
+				414532092AA79ACE006CE364 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 414531AB2AA78E32006CE364 /* Products */;
 			projectDirPath = "";
@@ -391,6 +431,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4145320E2AA79C80006CE364 /* Photos.json in Resources */,
 				414531B52AA78E33006CE364 /* Preview Assets.xcassets in Resources */,
 				414531B22AA78E33006CE364 /* Assets.xcassets in Resources */,
 			);
@@ -418,6 +459,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				414531BA2AA78E33006CE364 /* DemoSwiftUI.xcdatamodeld in Sources */,
+				414532162AA7A12E006CE364 /* ErrorRetryView.swift in Sources */,
 				414531E92AA79121006CE364 /* Data+Extension.swift in Sources */,
 				414531F22AA794C7006CE364 /* PhotosViewModel.swift in Sources */,
 				414531FB2AA79645006CE364 /* Encodable+Extension.swift in Sources */,
@@ -426,7 +468,9 @@
 				414531F02AA794A6006CE364 /* PhotosScreen.swift in Sources */,
 				414531B72AA78E33006CE364 /* Persistence.swift in Sources */,
 				414532002AA79760006CE364 /* Optional+Extension.swift in Sources */,
+				414532132AA79D17006CE364 /* JSONHelper.swift in Sources */,
 				414532032AA79791006CE364 /* PhotosService.swift in Sources */,
+				414532112AA79CE4006CE364 /* PhotosServicePreview.swift in Sources */,
 				414531E32AA78FD9006CE364 /* NetworkCaller.swift in Sources */,
 				414531EB2AA791EB006CE364 /* EndpointProtocol.swift in Sources */,
 				414531ED2AA7924B006CE364 /* HTTPMethod.swift in Sources */,
@@ -769,6 +813,14 @@
 				minimumVersion = 0.2.4;
 			};
 		};
+		414532092AA79ACE006CE364 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -776,6 +828,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 414531FC2AA79703006CE364 /* XCRemoteSwiftPackageReference "URLQueryItemEncoder" */;
 			productName = URLQueryItemEncoder;
+		};
+		4145320A2AA79ACE006CE364 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 414532092AA79ACE006CE364 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 

@@ -21,10 +21,12 @@ struct PhotosResponse: Decodable {
     }
 }
 
-struct Photo: Decodable {
+struct Photo: Decodable, Identifiable {
     let description: String
     let id: Int
     let url: String
     let title: String
     let user: Int
 }
+
+typealias Photos = [Photo]
